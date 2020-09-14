@@ -1,0 +1,409 @@
+body,html {
+    font-family: 'Unkempt', cursive;
+    margin: 0;
+    background-color: Grey;
+    height: 100%;    
+}
+
+body {
+    background-image: url(../img/Back.png);
+}
+
+.main {
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* HEADER */
+header {
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(12, 12, 12);
+    border-top-right-radius: 35%;
+    border-top-left-radius: 35%;
+    border-bottom-right-radius: 35%;
+    border-bottom-left-radius: 35%;
+}
+
+.headerLogo {
+    margin-left: 60px;
+    margin-top: auto ;
+}
+
+.Logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 25%;
+    transition: .3s linear;
+}
+
+.Logo:hover {
+    transform: scale(1.2);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navElements {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    margin: 0 60px;
+    
+    transition: .2s linear;
+}
+
+.navElements:hover {
+    padding: 10px;
+    color: rgb(202, 54, 104);
+    border: 20px solid rgb(12, 12, 12);
+    border-radius: 35%;
+    font-size: 40px;
+}
+
+.navElementActive {
+    text-decoration: none;
+    padding: 10px;
+    color: rgb(202, 54, 104);
+    border: 20px solid rgb(12, 12, 12);
+    border-radius: 35%;
+    font-size: 40px;
+}
+
+.headerLogin {
+    margin-right: 70px;
+}
+
+.headerLogin button {
+    background-color: rgb(190, 52, 121);
+    padding: 5px 15px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* CONTENT */
+.mainContent {
+    width: 900px;
+    height: 430px;
+    margin: 5px auto;
+    background-color: pink;
+    border-radius: 5%;
+}
+
+.hello {
+    text-align: center;
+    font-size: 135px;
+    font-weight: 700;
+}
+
+.aboutContent {
+    width: 900px;
+    height: 430px;
+    margin: 5px auto;
+    background-color: pink;
+    border-radius: 5%;
+}
+
+.newsContent {
+    width: 900px;
+    height: 430px;
+    margin: 5px auto;
+    background-color: pink;
+    border-radius: 5%;
+    overflow-y: scroll;
+    overflow-x: none;
+    padding: 10px;
+    padding-right: 10px;
+}
+
+.news {
+    width: 860px;
+    height: 190px;
+    margin: 20px;
+    display: flex;
+}
+
+.newsText {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.newsImage img {
+    width: 320px;
+    height: 190px;
+}
+
+.newsName {
+    position: absolute;
+    top: 0;
+}
+
+.newsT {
+    position: absolute;
+    left: 0;
+    margin-left: 15px;
+}
+
+.newsData {
+    position: absolute;
+    bottom: 0;
+}
+
+.mediaContent {
+    width: 900px;
+    height: 430px;
+    margin: 5px auto;
+    background-color: pink;
+    border-radius: 5%;
+    overflow: hidden;
+    position: relative;
+}
+
+.downloadContent {
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    height: 430px;
+    margin: 5px auto;
+    background-color: pink;
+    border-radius: 5%;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.labels {
+    display: flex;
+    justify-content: space-around;
+}
+
+.labels a {
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.downloadIcon {
+    margin: 70px;
+    margin-top: 120px;
+    margin-bottom: 0px;
+    width: 150px;
+    height: 150px;
+}
+
+.aboutContent p {
+   margin: 20px;
+   font-size: 21px;
+}
+
+.aboutContent h1 {
+    text-align: center;
+    font-weight: 700;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.aboutContent h2 {
+    text-align: center;
+    font-weight: 400;
+    margin: 0px;
+    padding-bottom: 15px;
+}
+
+/* SLIDER */
+.navigation {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+
+}
+
+.bar {
+    height: 8px;
+    width: 30px; 
+    margin: 6px;
+    cursor: pointer;
+    background-color: #ddd;
+    opacity: .6;
+    transition: all .4s ease; 
+    border-radius: 10px;
+
+}
+
+input[name="q"] {
+    position: absolute;
+    visibility: hidden;
+}
+
+.bar:hover {
+    opacity: 1.0;
+    transform: scale(1.2);
+}
+
+.slides {
+
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+
+.slide {
+    width: 20%;
+    transition: all .6s ease;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+#q1:checked ~ .s1 {
+    margin-left: 0;
+}
+
+#q2:checked ~ .s1 {
+    margin-left: -20%;
+}
+
+#q3:checked ~ .s1 {
+    margin-left: -40%;
+}
+
+#q4:checked ~ .s1 {
+    margin-left: -60%;
+}
+
+#q5:checked ~ .s1 {
+    margin-left: -80%;
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+    background-color: rgb(48, 47, 47);
+    margin-top: auto;
+    border-top-right-radius: 10%;
+    border-top-left-radius: 10%;
+}
+
+footer p {
+    color: white;
+    line-height: 1.5;
+    margin-left: 330px;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 315px;
+}
+
+.contactImage {
+    margin: 0 30px;
+    width: 60px;
+    height: 60px;
+    transition: .2s linear;
+}
+
+.contactImage:hover {
+    transform: scale(1.4);
+    cursor: pointer;
+}
+
+/* LOGINFORM */
+.center {
+    display: flex;
+    align-items: center;
+}
+
+.loginForm {
+    margin: 50px auto;
+    margin-top: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 300px;
+    height: 400px;
+    background-color: rgb(12, 12, 12);
+    border-radius: 20%;
+    border: 10px white solid;
+    color: white;
+}
+
+.LogForm {
+    font-weight: 700;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.LogForm a {
+    margin: 40px;
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 20%;
+    
+    color: white;
+    box-shadow: 0px 0px 5px 5px rgba(105,105,105,1);
+    transition: all .2s linear;
+}
+
+.LogForm a:hover {
+    color: rgb(202, 54, 104);
+    transform: scale(1.2);
+}
+
+/* REGISTRATIONFORM */
+.registrationForm {
+    margin: 50px auto;
+    width: 300px;
+    height: 500px;
+    background-color: black;
+    border-radius: 20%;
+    color: white;
+    padding-top: 10px;
+    border: 10px white solid;
+
+}
+
+.RegForm {
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.submitButton {
+    background-color: rgb(190, 52, 121);
+    font-weight: 700;
+    padding: 5px;
+    font-size: 15px;
+    margin-top: 10px;
+}
